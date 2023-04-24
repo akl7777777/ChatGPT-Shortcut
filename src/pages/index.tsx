@@ -45,14 +45,23 @@ const DESCRIPTION = translate({
   message: "让生产力加倍的 ChatGPT 快捷指令",
 });
 const SUBMIT_URL =
-  "https://afdian.net/a/akl7777777/plan";
+  "#";
 
 type UserState = {
   scrollTopPosition: number;
   focusedElementId: string | undefined;
 };
 
-function MyComponent() {
+let isVisible = false;
+const setIsVisible = () => {
+  isVisible = !isVisible;
+}
+const handleClick = () => {
+  setIsVisible();
+};
+
+
+function MyComponent({ isVisible }) {
   const [showImage, setShowImage] = useState(true);
 
   const toggleImage = () => {
@@ -60,7 +69,7 @@ function MyComponent() {
   };
 
   return (
-      <div>
+      <div style={{ display: isVisible ? 'block' : 'none' }}>
         {/*<button onClick={toggleImage}>{showImage ? '隐藏图片' : '显示图片'}</button>*/}
         {showImage && <img src='img/zfbwx.png' style={{height:230,width:400}} alt="Example" />}
       </div>
@@ -154,10 +163,10 @@ function useFilteredUsers() {
 function ShowcaseHeader() {
   return (
     <section className="margin-top--lg margin-bottom--lg text--center">
-      <Heading as="h1">ChatGPT Shortcut</Heading>
+      <Heading as="h1">ChatGPT Prompt Hub (提示词大合集)</Heading>
       <p>{DESCRIPTION}</p>
-      <MyComponent/>
-      <Link className="button button--primary" to={SUBMIT_URL}>
+      <MyComponent isVisible={isVisible}/>
+      <Link onClick={handleClick} className="button button--primary" to={SUBMIT_URL}>
         <Translate id="showcase.header.button">🙏 开发不易,如果给您带来帮助,可以请ShellGPT作者吃一碗特色腰花面</Translate>
       </Link>
     </section>
