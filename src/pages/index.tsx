@@ -45,12 +45,27 @@ const DESCRIPTION = translate({
   message: "让生产力加倍的 ChatGPT 快捷指令",
 });
 const SUBMIT_URL =
-  "https://github.com/rockbenben/ChatGPT-Shortcut/discussions/11";
+  "https://afdian.net/a/akl7777777/plan";
 
 type UserState = {
   scrollTopPosition: number;
   focusedElementId: string | undefined;
 };
+
+function MyComponent() {
+  const [showImage, setShowImage] = useState(true);
+
+  const toggleImage = () => {
+    setShowImage(!showImage);
+  };
+
+  return (
+      <div>
+        {/*<button onClick={toggleImage}>{showImage ? '隐藏图片' : '显示图片'}</button>*/}
+        {showImage && <img src='img/zfbwx.png' style={{height:230,width:400}} alt="Example" />}
+      </div>
+  );
+}
 
 function restoreUserState(userState: UserState | null) {
   const { scrollTopPosition, focusedElementId } = userState ?? {
@@ -141,8 +156,9 @@ function ShowcaseHeader() {
     <section className="margin-top--lg margin-bottom--lg text--center">
       <Heading as="h1">ChatGPT Shortcut</Heading>
       <p>{DESCRIPTION}</p>
+      <MyComponent/>
       <Link className="button button--primary" to={SUBMIT_URL}>
-        <Translate id="showcase.header.button">🙏 请添加你的提示词</Translate>
+        <Translate id="showcase.header.button">🙏 开发不易,如果给您带来帮助,可以请ShellGPT作者吃一碗特色腰花面</Translate>
       </Link>
     </section>
   );
@@ -328,7 +344,7 @@ function ShowcaseCards({ isDescription }) {
       const counts = await fetchAllCopyCounts();
       setCopyCounts(counts);
     };
-  
+
     fetchData();
   }, []);
 
