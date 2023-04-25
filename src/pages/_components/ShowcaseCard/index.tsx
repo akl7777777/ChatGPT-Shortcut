@@ -88,7 +88,7 @@ function ShowcaseCard({ user, isDescription, copyCount, onCopy }) {
     try {
       const updatedCount = await updateCopyCount(user.id);
       if (user.description) {
-        copy(user.description);
+        copy(currentLanguage === "zh-Hans" ? user.desc_cn : user.desc_en);
       }
       setShowCopied(true);
       setTimeout(() => setShowCopied(false), 2000);
