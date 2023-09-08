@@ -1,5 +1,5 @@
 {
-  "常用": {
+  "收藏": {
     "message": "Favorite"
   },
   "showcase.tag.favorite.description": {
@@ -33,7 +33,7 @@
     "message": "SEO"
   },
   "showcase.tag.seo.description": {
-    "message": "Keyword Expansion Generation"
+    "message": "Prompt Expansion Generation"
   },
   "点评/评鉴": {
     "message": "Reviews"
@@ -149,15 +149,6 @@
   "showcase.tag.contribute.description": {
     "message": "Works submitted by the public that can help broaden our horizons."
   },
-  "Personal": {
-    "message": "Personal"
-  },
-  "showcase.tag.personal.description": {
-    "message": "For personal non-productivity usage only, provided for reference purposes."
-  },
-  "ChatGPT Shortcut - 简单易用的 ChatGPT 快捷指令表，让生产力倍增！": {
-    "message": "ChatGPT Shortcut - A concise and user-friendly shortcut guide for ChatGPT, Power up your efficiency and productivity."
-  },
   "让生产力加倍的 ChatGPT 快捷指令": {
     "message": "Maximize your Efficiency and Productivity"
   },
@@ -183,10 +174,10 @@
   "showcase.usersList.allUsers": {
     "message": "All prompts"
   },
-  "已复制": {
-    "message": "Copyed"
+  "copy.done": {
+    "message": "Copied"
   },
-  "复制": {
+  "copy.button": {
     "message": "Copy"
   },
   "theme.ErrorPageContent.title": {
@@ -448,26 +439,6 @@
     "message": "Expand sidebar",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
-  "theme.IdealImageMessage.loading": {
-    "message": "Loading...",
-    "description": "When the full-scale image is loading"
-  },
-  "theme.IdealImageMessage.load": {
-    "message": "Click to load{sizeMessage}",
-    "description": "To prompt users to load the full image. sizeMessage is a parenthesized size figure."
-  },
-  "theme.IdealImageMessage.offline": {
-    "message": "Your browser is offline. Image not loaded",
-    "description": "When the user is viewing an offline document"
-  },
-  "theme.IdealImageMessage.404error": {
-    "message": "404. Image not found",
-    "description": "When the image is not found"
-  },
-  "theme.IdealImageMessage.error": {
-    "message": "Error. Click to reload",
-    "description": "When the image fails to load for unknown error"
-  },
   "theme.ErrorPageContent.tryAgain": {
     "message": "Try again",
     "description": "The label of the button to try again rendering when the React error boundary captures an error"
@@ -480,9 +451,6 @@
     "message": "Tags",
     "description": "The title of the tag list page"
   },
-  "ChatGPT Shortcut - 简单易用的 ChatGPT 快捷指令表，让生产力倍增！标签筛选、关键词搜索和一键复制 Prompts": {
-    "message": "ChatGPT Shortcut - A simple and user-friendly ChatGPT shortcut command list that doubles productivity! Includes label filtering, keyword search, and one-click prompt copying."
-  },
   "教育/学生": {
     "message": "Pedagogy"
   },
@@ -494,5 +462,340 @@
   },
   "showcase.tag.academic.description": {
     "message": "People and things related to academia or schools."
+  },
+  "Latest": {
+    "message": "Latest"
+  },
+  "showcase.tag.latest.description": {
+    "message": "Recently added prompts"
+  },
+  "feedback.title": {
+    "message": "Feedback and suggestions"
+  },
+  "feedback.description": {
+    "message": "您的反馈对我们很重要！"
+  },
+  "feedback.welcome": {
+    "message": "Feedback and suggestions",
+    "description": "The welcome title on the feedback page"
+  },
+  "feedback.paragraph": {
+    "message": "We cordially invite you to provide suggestions, ideas, and prompts to continuously enhance ChatGPT Shortcut, thereby improving personal efficiency and productivity. If you encounter any bugs, please provide the relevant link and details of the issue. When it comes to prompt suggestions, you may submit content in multiple languages or simply describe your thoughts on the desired prompts. We look forward to expanding our collective knowledge and generating high-quality outputs through these suggestions. Once your submitted prompts are published, your contributions will be credited on the page. You can search for entries associated with your contributor name (username).",
+    "description": "The main paragraph on the feedback page"
+  },
+  "你的提示词": {
+    "message": "Your Prompts"
+  },
+  "input.rules.username": {
+    "message": "Please enter username or mail!"
+  },
+  "input.rules.password": {
+    "message": "Please enter your password!"
+  },
+  "input.rules.email": {
+    "message": "Please input your email!"
+  },
+  "message.error": {
+    "message": "Entry submission failed, please try again later"
+  },
+  "message.loginSuccess": {
+    "message": "Login successful!"
+  },
+  "message.registerSuccess": {
+    "message": "Registration success!"
+  },
+  "input.username": {
+    "message": "Username/Mail"
+  },
+  "input.password": {
+    "message": "Password"
+  },
+  "button.login": {
+    "message": "Log in"
+  },
+  "input.register.username": {
+    "message": "Username"
+  },
+  "input.email": {
+    "message": "Mail"
+  },
+  "agreement.rules": {
+    "message": "Agree to terms of service and privacy policy before use"
+  },
+  "agreement.text": {
+    "message": "Click here to agree "
+  },
+  "agreement.terms": {
+    "message": "Terms of Service "
+  },
+  "agreement.and": {
+    "message": "and "
+  },
+  "agreement.policy": {
+    "message": "Privacy Policy"
+  },
+  "button.register": {
+    "message": "Register"
+  },
+  "tabs.login": {
+    "message": "Log in"
+  },
+  "tabs.register": {
+    "message": "Register"
+  },
+  "card.welcome": {
+    "message": "Welcome"
+  },
+  "message.success": {
+    "message": "Entry submitted successfully!"
+  },
+  "link.user": {
+    "message": "User Interface"
+  },
+  "button.logout": {
+    "message": "Log out"
+  },
+  "button.addPrompt": {
+    "message": "Add Your Prompt"
+  },
+  "点击移除收藏": {
+    "message": "Click to remove favorite"
+  },
+  "message.changePassword.success": {
+    "message": "Password reset complete!"
+  },
+  "error.changePassword": {
+    "message": "Error changing password:"
+  },
+  "message.changePassword.error": {
+    "message": "Password modification failed, please try again later"
+  },
+  "message.forgotPassword.success": {
+    "message": "Password reset email sent!"
+  },
+  "error.forgotPassword": {
+    "message": "Error sending forgot password email:"
+  },
+  "message.forgotPassword.error": {
+    "message": "Failed to send password reset email, please try again later"
+  },
+  "message.loading": {
+    "message": "Loading..."
+  },
+  "label.changePassword": {
+    "message": "Change Password"
+  },
+  "input.currentPassword": {
+    "message": "Please enter the current password!"
+  },
+  "placeholder.currentPassword": {
+    "message": "Current Password"
+  },
+  "input.newPassword": {
+    "message": "Please enter a new password!"
+  },
+  "placeholder.newPassword": {
+    "message": "New Password"
+  },
+  "input.confirmPassword": {
+    "message": "Please confirm the new password!"
+  },
+  "placeholder.confirmPassword": {
+    "message": "Confirm the new password"
+  },
+  "button.changePassword": {
+    "message": "Change Password"
+  },
+  "label.forgotPassword": {
+    "message": "Forget the password"
+  },
+  "placeholder.email": {
+    "message": "Mail"
+  },
+  "button.sendResetEmail": {
+    "message": "Send reset email"
+  },
+  "link.home": {
+    "message": "Return Home"
+  },
+  "title.userInfo": {
+    "message": "User Info"
+  },
+  "userInfo.username": {
+    "message": "Username:"
+  },
+  "userInfo.email": {
+    "message": "Mail:"
+  },
+  "AiShort (ChatGPT Shortcut) - 简单易用的 ChatGPT 快捷指令表，让生产力倍增！标签筛选、关键词搜索和一键复制 Prompts": {
+    "message": "AiShort (ChatGPT Shortcut) - A simple and user-friendly ChatGPT shortcut command list that doubles productivity! Includes label filtering, prompt search, and one-click prompt copying."
+  },
+  "message.resetPassword.success": {
+    "message": "Password reset successful!"
+  },
+  "error.resetPassword": {
+    "message": "Error resetting password:"
+  },
+  "message.resetPassword.error": {
+    "message": "Password reset failed, please try again later"
+  },
+  "button.resetPassword": {
+    "message": "Reset Password"
+  },
+  "tabs.forgotPassword": {
+    "message": "Forget the password"
+  },
+  "button.forgotPassword": {
+    "message": "Forgot Password"
+  },
+  "input.resetPassword.code": {
+    "message": "Please enter your reset code!"
+  },
+  "placeholder.resetPassword.code": {
+    "message": "Reset code"
+  },
+  "link.addprompt": {
+    "message": "Add a custom prompt"
+  },
+  "modal.addprompt.title": {
+    "message": "Share Prompt (This content will appear in the 'Your Prompts' tab)"
+  },
+  "message.addprompt.requiredTitle": {
+    "message": "Please enter the prompt title!"
+  },
+  "input.addprompt.title": {
+    "message": "Prompt title"
+  },
+  "message.addprompt.requiredDescription": {
+    "message": "Please enter the prompt content!"
+  },
+  "input.addprompt.description": {
+    "message": "Prompt content"
+  },
+  "input.addprompt.remark": {
+    "message": "Explanation of Prompt Function (optional)"
+  },
+  "input.addprompt.notes": {
+    "message": "Note (optional): You can provide a source explanation for the prompts and include their other language versions here. Additionally, if you have any expansion ideas or specific requirements regarding the prompts, please provide details in this section."
+  },
+  "message.addprompt.submission": {
+    "message": "Would you like to share the prompt on a public page?"
+  },
+  "message.success1": {
+    "message": "Click on the label 'Your Prompt' to view the custom prompts that have been added."
+  },
+  "message.deletePrompt.confirm.title": {
+    "message": "Confirm Delete"
+  },
+  "message.deletePrompt.confirm.content": {
+    "message": "Are you sure you want to delete this prompt?"
+  },
+  "message.deletePrompt.success": {
+    "message": "Prompt successfully deleted!"
+  },
+  "message.deletePrompt.error": {
+    "message": "Failed to delete prompt, please try again later."
+  },
+  "modal.updateprompt.title": {
+    "message": "Edit the Prompt"
+  },
+  "button.updateprompt": {
+    "message": "Update the Prompt"
+  },
+  "comments.info": {
+    "message": "Kindly provide your opinions, thoughts, or insights regarding the given prompt in the space below."
+  },
+  "tooltip.switchLang": {
+    "message": "Click to toggle the display language."
+  },
+  "toggle_prompt_language_description": {
+    "message": "Change the display language of the prompt to toggle between English and the current language of the page."
+  },
+  "toggle_prompt_language": {
+    "message": "Switching Prompt Languages"
+  },
+  "你添加或制作过的个人提示词，可用于存放AiShort之外的提示词。": {
+    "message": "Personal prompts you have added or made can be used to store prompts other than AiShort."
+  },
+  "加载更多": {
+    "message": "Load More"
+  },
+  "field.id": {
+    "message": "Release time"
+  },
+  "field.upvoteDifference": {
+    "message": "Votes"
+  },
+  "order.ascending": {
+    "message": "Ascending order"
+  },
+  "order.descending": {
+    "message": "Descending order"
+  },
+  "upvote": {
+    "message": "Upvote"
+  },
+  "downvote": {
+    "message": "Downvote"
+  },
+  "分享到社区的提示词": {
+    "message": "Share the prompt word to the community"
+  },
+  "社区提示词": {
+    "message": "Community prompts"
+  },
+  "input.addprompt.share.checked": {
+    "message": "Yes"
+  },
+  "input.addprompt.share.unchecked": {
+    "message": "No"
+  },
+  "本页面展示的提示词均由网友分享和上传，我们无法保证内容的准确性、质量或完整性，同时也不对因内容引发的任何法律责任承担责任。如果发现有侵权或者其他问题，可以联系我们进行处理。我们将在收到通知后尽快处理。": {
+    "message": "The prompts displayed on this page are shared and uploaded by netizens, we cannot guarantee the accuracy, quality or completeness of the content, and we also do not take responsibility for any legal liability arising from the content. If you find any infringement or other problems, you can contact us to deal with it. We will deal with it as soon as possible after receiving the notification."
+  },
+  "description.communityPrompts": {
+    "message": "Explore the collection of innovative prompts shared by AiShort users, these unique and fun prompts can inspire you when creating short videos, novels, games and more. Vote for your favorite prompts, copy them and share them with your friends. Let Aishort help you open the door to creativity and create great work together."
+  },
+  "link.myfavorite": {
+    "message": "My Favorites"
+  },
+  "移除收藏": {
+    "message": "Remove"
+  },
+  "comment.reply": {
+    "message": "Reply"
+  },
+  "edit": {
+    "message": "Edit"
+  },
+  "delete": {
+    "message": "Delete"
+  },
+  "cancel": {
+    "message": "Cancel"
+  },
+  "comment.required": {
+    "message": "Please input your comment"
+  },
+  "comment.maxLength": {
+    "message": "Comment should not exceed 2000 characters"
+  },
+  "comment.placeholder": {
+    "message": "Type your comment here... Support Markdown and HTML syntax."
+  },
+  "comment.update": {
+    "message": "Update Comment"
+  },
+  "reply.required": {
+    "message": "Please input reply content"
+  },
+  "reply.submit": {
+    "message": "Reply Comment"
+  },
+  "comment.add": {
+    "message": "Add Comment"
+  },
+  "comment.comments": {
+    "message": "comments"
   }
 }

@@ -3,12 +3,13 @@
 
 const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
-const zhNavbar = require('./src/components/LocalizedNavbar/Navbar.zh');
-const enNavbar = require('./src/components/LocalizedNavbar/Navbar.en');
+//const zhNavbar = require("./src/components/LocalizedNavbar/Navbar.zh");
+//const enNavbar = require("./src/components/LocalizedNavbar/Navbar.en");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Tag filtering, keyword search, and one-click copy prompts",
+  title:
+    "AiShort(ChatGPT Shortcut)-Tag filtering, keyword search, and one-click copy prompts",
   // tagline: '方便中文使用 ChatGPT 快捷指令',
   favicon: "img/favicon.ico",
 
@@ -31,10 +32,43 @@ const config = {
   // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: "zh-Hans",
-    locales: ["zh-Hans", "en"],
+    locales: ["zh-Hans", "en", "ja", "ko", "es", "fr", "de", "it", "ru", "pt", "hi", "ar", "bn"],
     localeConfigs: {
       en: {
         htmlLang: "en-US",
+      },
+      ja: {
+        htmlLang: "ja-JP",
+      },
+      ko: {
+        htmlLang: "ko-KR",
+      },
+      es: {
+        htmlLang: "es-ES",
+      },
+      fr: {
+        htmlLang: "fr-FR",
+      },
+      de: {
+        htmlLang: "de-DE",
+      },
+      it: {
+        htmlLang: "it-IT",
+      },
+      ru: {
+        htmlLang: "ru-RU",
+      },
+      pt: {
+        htmlLang: "pt-PT",
+      },
+      hi: {
+        htmlLang: "hi-IN",
+      },
+      ar: {
+        htmlLang: "ar-SA",
+      },
+      bn: {
+        htmlLang: "bn-BD",
       },
     },
   },
@@ -44,6 +78,10 @@ const config = {
       "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
+        docs: {
+          path: "docs",
+          sidebarPath: "sidebars.js",
+        },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
@@ -56,17 +94,23 @@ const config = {
   ],
   plugins: [
     [
-      "ideal-image",
-      /** @type {import('@docusaurus/plugin-ideal-image').PluginOptions} */
-      ({
-        quality: 70,
-        max: 1030,
-        min: 640,
-        steps: 2,
-        // Use false to debug, but it incurs huge perf costs
-        disableInDev: true,
-      }),
+      "@docusaurus/plugin-client-redirects",
+      {
+        redirects: [
+          // /docs/oldDoc -> /docs/newDoc
+          {
+            to: "/",
+            from: "/cn",
+          },
+        ],
+      },
     ],
+    /* [
+      "docusaurus2-plugin-google-adsense",
+      {
+        dataAdClient: "ca-pub-7585955822109216",
+      },
+    ], */
     "./plugins/piwik.js",
     "./plugins/instantpage.js",
   ],
@@ -77,12 +121,100 @@ const config = {
       // Replace with your project's social card
       // image: 'img/docusaurus-social-card.jpg',
       metadata: [
-        { name: "keywords", content: "prompt,ChatGPT,AI prompts，提示词" },
+        {
+          name: "keywords",
+          content:
+            "prompt,aishort,ChatGPT Shortcut,ChatGPT SC,ChatGPT,AI prompts，提示词",
+        },
       ],
-      navbar: getNavbar(),
+      navbar: {
+        hideOnScroll: true,
+        title: "AI Short",
+        logo: {
+          alt: "ChatGPT Shortcuts",
+          src: "img/logo.svg",
+        },
+        items: [
+          {
+            to: "docs",
+            label: "📘 使用说明",
+            position: "left",
+          },
+          {
+            to: "/community-prompts",
+            label: "🏘️ 社区提示词",
+            position: "left",
+          },
+          {
+            type: "dropdown",
+            label: "🛠️ 应用工具",
+            position: "left",
+            items: [
+              {
+                label: "IMGPrompt",
+                href: "https://prompt.newzone.top/",
+              },
+              {
+                label: "文字处理",
+                href: "https://tools.newzone.top/json-translate",
+              },
+              {
+                label: "工具收藏",
+                href: "https://nav.newzone.top",
+              },
+              {
+                label: "Chrome 扩展",
+                href: "https://chrome.google.com/webstore/detail/chatgpt-shortcut/blcgeoojgdpodnmnhfpohphdhfncblnj",
+              },
+              {
+                label: "Edge 扩展",
+                href: "https://microsoftedge.microsoft.com/addons/detail/chatgpt-shortcut/hnggpalhfjmdhhmgfjpmhlfilnbmjoin",
+              },
+              {
+                label: "Find on Product Hunt",
+                href: "https://www.producthunt.com/posts/chatgpt-shortcut?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-chatgpt&#0045;shortcut",
+              },
+            ],
+          },
+          {
+            type: "dropdown",
+            label: "反馈建议",
+            position: "left",
+            items: [
+              {
+                label: "📝 提交反馈",
+                to: "/feedback",
+              },
+              {
+                label: "💬 微信交流",
+                href: "https://img.newzone.top/wechat.svg",
+              },
+              {
+                label: "📧 发送邮件",
+                href: "mailto:learndata@newzone.top",
+              },
+              {
+                label: "📺 加入 Discord",
+                href: "https://discord.gg/PZTQfJ4GjX",
+              },
+            ],
+          },
+          { type: "localeDropdown", position: "right" },
+          {
+            href: "https://github.com/rockbenben/ChatGPT-Shortcut",
+            position: "right",
+            className: "header-github-link",
+          },
+          {
+            href: "https://discord.gg/PZTQfJ4GjX",
+            position: "right",
+            className: "header-discord-link",
+          },
+        ],
+      },
       footer: {
         style: "dark",
-        copyright: `Copyright © ${new Date().getFullYear()} ChatGPT Shortcut`,
+        copyright: `Copyright © ${new Date().getFullYear()} AiShort (ChatGPT Shortcut)`,
       },
       prism: {
         theme: lightCodeTheme,
@@ -101,13 +233,15 @@ const config = {
 
 module.exports = config;
 
-process.env.DOCUSAURUS_CURRENT_LOCALE ??= "zh-Hans";
+/* process.env.DOCUSAURUS_CURRENT_LOCALE ??= "zh-Hans";
 function getNavbar() {
-  switch(process.env.DOCUSAURUS_CURRENT_LOCALE) {
-    case "en": return enNavbar;
-    default: return zhNavbar;
+  switch (process.env.DOCUSAURUS_CURRENT_LOCALE) {
+    case "en":
+      return enNavbar;
+    default:
+      return zhNavbar;
   }
-}
+} */
 /* function getAnnouncement() {
   switch(process.env.DOCUSAURUS_CURRENT_LOCALE) {
     case "en": return 'Announcement_en';
